@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >      
+  <classPathEntry location="db2jcc-3.59.81.jar" />
+  
+  <context id="MySqlTables" targetRuntime="MyBatis3">
+   <!--   <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+    	connectionURL="jdbc:mysql://localhost:3306/ics_ec?characterEncoding=UTF-8" 
+    	userId="root" password="lixing" />-->
+  <jdbcConnection driverClass="com.ibm.db2.jcc.DB2Driver" 
+    	connectionURL="jdbc:db2://10.250.1.32:60000/icsjx" 
+    	userId="db2inst1" password="db2inst1" />
+<!--       	<jdbcConnection driverClass="com.ibm.db2.jcc.DB2Driver"  -->
+<!--     	connectionURL="jdbc:db2://localhost:50000/ec"  -->
+<!--     	userId="administrator" password="joesun83" /> -->
+
+	<javaModelGenerator targetPackage="com.allinfinance.ics.model"
+		targetProject="src/main/java">
+		<property name="enableSubPackages" value="true" />
+	</javaModelGenerator>
+	
+    <sqlMapGenerator targetPackage="com.allinfinance.ics.mapper" targetProject="src/main/java" >
+    	<property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+    
+    <javaClientGenerator targetPackage="com.allinfinance.ics.mapper" targetProject="src/main/java" type="XMLMAPPER" >
+    	<property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+    
+ 	<table tableName="TBL_CARD_INFO" domainObjectName="CardInfo" enableSelectByExample="true" />
+	<table tableName="TBL_TRANS_LOG" domainObjectName="TransLog" enableSelectByExample="true"/>
+  </context>
+  
+</generatorConfiguration>
