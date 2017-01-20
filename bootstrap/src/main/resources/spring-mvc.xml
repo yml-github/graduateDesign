@@ -54,7 +54,7 @@
 		<!-- 配置登陆拦截器 -->
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="priv.yml.gd.intercepters.LoginHandlerIntercepter"></bean>
+			<bean class="priv.yml.gd.intercepter.LoginHandlerIntercepter"></bean>
 		</mvc:interceptor>
 		<!-- ..... -->
 	</mvc:interceptors>

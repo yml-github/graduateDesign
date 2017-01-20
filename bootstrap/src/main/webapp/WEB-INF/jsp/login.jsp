@@ -25,14 +25,14 @@
 				<div class="col-md-4">
 				</div>
 				<div class="col-md-4">
-					<form class="form-horizontal" role="form">
+					<form class="form-horizontal" role="form" action="login" method="post">
 						<div class="form-group">
 							 
 							<label for="inputEmail3" class="col-sm-2 control-label">
 								Email
 							</label>
 							<div class="col-sm-10">
-								<input type="email" class="form-control" id="inputEmail3" />
+								<input type="email" class="form-control" id="email" name="email" />
 							</div>
 						</div>
 						<div class="form-group">
@@ -41,7 +41,7 @@
 								Password
 							</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3" />
+								<input type="password" class="form-control" id="password" name="password" />
 							</div>
 						</div>
 						<div class="form-group">
